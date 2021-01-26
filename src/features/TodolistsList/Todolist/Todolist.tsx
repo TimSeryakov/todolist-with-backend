@@ -26,7 +26,7 @@ export const Todolist = React.memo(function ({demo = false, ...props}: PropsType
             return
         }
         fetchTasks(props.todolist.id)
-    }, [])
+    }, [demo, fetchTasks, props.todolist.id]) // fix for netlify
 
     const addTaskCallback = useCallback(async (title: string, helper: AddItemFormSubmitHelperType) => {
 
@@ -44,19 +44,19 @@ export const Todolist = React.memo(function ({demo = false, ...props}: PropsType
             helper.setTitle('')
         }
 
-    }, [props.todolist.id])
+    }, [props.todolist.id, dispatch]) // fix for netlify
 
     const removeTodolist = () => {
         removeTodolistTC(props.todolist.id)
     }
     const changeTodolistTitle = useCallback((title: string) => {
         changeTodolistTitleTC({id: props.todolist.id, title: title})
-    }, [props.todolist.id])
+    }, [props.todolist.id, changeTodolistTitleTC]) // fix for netlify
 
     const onFilterButtonClickHandler = useCallback((filter: FilterValuesType) => changeTodolistFilter({
         filter: filter,
         id: props.todolist.id
-    }), [props.todolist.id])
+    }), [props.todolist.id, changeTodolistFilter]) // fix for netlify
 
     let tasksForTodolist = props.tasks
 
