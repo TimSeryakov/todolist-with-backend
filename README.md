@@ -2,7 +2,6 @@
 ### TypeScript, React, Redux, Redux-Toolkit, Storybook, Jest, Material UI, Formik
 
 App: https://todolist-with-backend-a25b4d.netlify.app <br />
-Storybook: https://wonderful-leavitt-9e0f20.netlify.app
 
 ## Available Scripts
 
