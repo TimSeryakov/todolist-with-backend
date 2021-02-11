@@ -1,5 +1,5 @@
 # Учебный проект
-### TypeScript, React, Redux, Redux-Toolkit, Storybook, Jest, Material UI, Formik
+### TypeScript, React, Redux
 
 App: https://todolist-with-backend-a25b4d.netlify.app <br />
 
